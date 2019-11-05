@@ -2,9 +2,17 @@
 <h1>{{message}}</h1>
 
 <app-structural-directive (childEvent)="message=$event" [parentData]="name"></app-structural-directive> -->
+<div style="text-align: center;">
+<h1>Routing and navigation</h1>
+</div>
+<nav>
+    <a routerLink="/departments" routerLinkActive="active">Departments</a>
+    <a routerLink="/employees" routerLinkActive="active">Employees</a>
+</nav>
 
-<h1>Welcom to {{title}}</h1>
-
+<!--Koristeno za ukljucivanje app-employe list i detail da ispisuje listu zaposlenika
 <app-employe-list></app-employe-list>
-<app-employe-detail></app-employe-detail>
+<app-employe-detail></app-employe-detail>-->
 
+<router-outlet></router-outlet>
+<!--Routed view goes here-->

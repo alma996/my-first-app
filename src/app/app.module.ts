@@ -8,6 +8,9 @@ import { StructuralDirectiveComponent } from './structural-directive/structural-
 import { EmployeList } from './employe-list/employe-list.component';
 import { EmployeDetail } from './employe-detail/employe-detail.component';
 import { EmployeeService } from './employe-list/employee.service';
+import { HttpClientModule } from '@angular/common/http'; //ukljucuje http client module
+
+import {AppRoutingModule, routingComponents} from './app-routing.module';
 
 
 @NgModule({
@@ -16,11 +19,15 @@ import { EmployeeService } from './employe-list/employee.service';
     TestComponent,
     StructuralDirectiveComponent,
     EmployeList,
-    EmployeDetail
+    EmployeDetail,
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
+    
   ],
   providers: [EmployeeService], //ukljucuje employe service
   // nakon ovoga vraca se u employe list i u constructor
